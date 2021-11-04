@@ -61,7 +61,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.MyViewHolder>{
         try {
             MyViewHolder itemViewHolder = (MyViewHolder) holder;
             System.out.println("hata1");
-
+            System.out.println(depo);
             Card mCard = (Card) depo.get(position);
             System.out.println("hata2");
 
@@ -76,11 +76,11 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.MyViewHolder>{
             itemViewHolder.card.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(mContext, "tıkladım", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, itemViewHolder.title.getText() , Toast.LENGTH_SHORT).show();
                 }
             });
         }catch (Exception e){
-            Log.d("HATA", "onBindViewHolder: ");
+            Log.d("HATA", "onBindViewHolder'da",e);
         }
 
     }

@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
             String fact = obj.getString("fact");
             String source = obj.getString("source");
 
-            Card newCard = new Card(id,title,fact,source);
-            depo.add("newCard");
+            Card mCard = new Card(id,title,fact,source);
+            depo.add(mCard);
         }}
         catch(JSONException | IOException e){
             Log.d("hatalar var", "doldur: hatalı ");;
